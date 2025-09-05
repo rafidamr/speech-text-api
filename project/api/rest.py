@@ -5,7 +5,7 @@ from arq.connections import RedisSettings
 from arq.jobs import Job
 from typing import Any
 
-from tasks import REDIS_SETTINGS
+from project.worker.tasks import REDIS_SETTINGS
 
 app = FastAPI(title="FastAPI → arq example")
 
