@@ -21,6 +21,7 @@ async def process_item(ctx, payload: dict):
     print(f"[worker] starting job {job_id} enqueued_at={enqueue_time} started_at={started}")
     # simulate work
     await asyncio.sleep(1)
+    payload["text"] = "(Processed) " + payload["text"]
     # pretend we processed payload
     result = {"job_id": job_id, "processed_at": started.isoformat(), "payload": payload}
     print(f"[worker] finished job {job_id} -> result: {result}")

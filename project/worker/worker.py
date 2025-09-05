@@ -20,5 +20,5 @@ if __name__ == "__main__":
     # run the worker (blocking)
     w = Worker(functions=[process_item], redis_settings=REDIS_SETTINGS)
     # synchronous run (blocks until stopped)
-    logger.info("Worker is starting")
+    logger.info("[worker] Worker is starting")
     w.run()
